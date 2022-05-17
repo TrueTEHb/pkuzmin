@@ -1,0 +1,299 @@
+"C:\Program Files\Java\jdk1.8.0_241\bin\java.exe" -Dmaven.multiModuleProjectDirectory=E:\devops\pkuzmin\pkuzmin "-Dmaven.home=C:\Program Files\apache-maven-3.8.4" "-Dclassworlds.conf=C:\Program Files\apache-maven-3.8.4\bin\m2.conf" "-Dmaven.ext.class.path=C:\Program Files\JetBrains\IntelliJ IDEA 2021.3.3\plugins\maven\lib\maven-event-listener.jar" "-javaagent:C:\Program Files\JetBrains\IntelliJ IDEA 2021.3.3\lib\idea_rt.jar=50353:C:\Program Files\JetBrains\IntelliJ IDEA 2021.3.3\bin" -Dfile.encoding=UTF-8 -classpath "C:\Program Files\apache-maven-3.8.4\boot\plexus-classworlds-2.6.0.jar;C:\Program Files\apache-maven-3.8.4\boot\plexus-classworlds.license" org.codehaus.classworlds.Launcher -Didea.version=2021.3.3 clean install -Pprofile2 -P profile2,!profile1
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] Parent for pkuzmin                                                 [pom]
+[INFO] Database for pkuzmin                                               [jar]
+[INFO] Microservice for pkuzmin                                           [jar]
+[INFO] pkuzmin                                                            [pom]
+[INFO] 
+[INFO] ------------------< ru.diasoft.micro:pkuzmin-parent >-------------------
+[INFO] Building Parent for pkuzmin 1.01.01-SNAPSHOT                       [1/4]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ pkuzmin-parent ---
+[INFO] 
+[INFO] --- maven-install-plugin:2.4:install (default-install) @ pkuzmin-parent ---
+[INFO] Installing E:\devops\pkuzmin\pkuzmin\pom.xml to C:\Users\pavie\.m2\repository\ru\diasoft\micro\pkuzmin-parent\1.01.01-SNAPSHOT\pkuzmin-parent-1.01.01-SNAPSHOT.pom
+[INFO] 
+[INFO] --------------------< ru.diasoft.micro:pkuzmin-db >---------------------
+[INFO] Building Database for pkuzmin 1.01.01-SNAPSHOT                     [2/4]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ pkuzmin-db ---
+[INFO] Deleting E:\devops\pkuzmin\pkuzmin\database\target
+[INFO] 
+[INFO] --- maven-resources-plugin:3.2.0:resources (default-resources) @ pkuzmin-db ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] Copying 3 resources
+[INFO] The encoding used to copy filtered properties files have not been set. This means that the same encoding will be used to copy filtered properties files as when copying other filtered resources. This might not be what you want! Run your build with --debug to see which files might be affected. Read more at https://maven.apache.org/plugins/maven-resources-plugin/examples/filtering-properties-files.html
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ pkuzmin-db ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-resources-plugin:3.2.0:testResources (default-testResources) @ pkuzmin-db ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] skip non existing resourceDirectory E:\devops\pkuzmin\pkuzmin\database\src\test\resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ pkuzmin-db ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-surefire-plugin:3.0.0-M5:test (default-test) @ pkuzmin-db ---
+[INFO] No tests to run.
+[INFO] 
+[INFO] --- maven-jar-plugin:3.1.1:jar (default-jar) @ pkuzmin-db ---
+[INFO] Building jar: E:\devops\pkuzmin\pkuzmin\database\target\pkuzmin-db-1.01.01-SNAPSHOT.jar
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.2:unpack (unpack) @ pkuzmin-db ---
+[INFO] Configured Artifact: ru.diasoft.fa.database:database-manager-core:?:jar
+[INFO] Unpacking C:\Users\pavie\.m2\repository\ru\diasoft\fa\database\database-manager-core\9.04.05-21042701\database-manager-core-9.04.05-21042701.jar to E:\devops\pkuzmin\pkuzmin\database\target\parent with includes "**/*" and excludes ""
+[INFO] 
+[INFO] --- maven-assembly-plugin:3.3.0:single (jar-with-dependencies) @ pkuzmin-db ---
+[INFO] Reading assembly descriptor: binary.xml
+[INFO] Building zip: E:\devops\pkuzmin\pkuzmin\database\target\pkuzmin-db-1.01.01-SNAPSHOT.zip
+[INFO] 
+[INFO] --- maven-install-plugin:2.4:install (default-install) @ pkuzmin-db ---
+[INFO] Installing E:\devops\pkuzmin\pkuzmin\database\target\pkuzmin-db-1.01.01-SNAPSHOT.jar to C:\Users\pavie\.m2\repository\ru\diasoft\micro\pkuzmin-db\1.01.01-SNAPSHOT\pkuzmin-db-1.01.01-SNAPSHOT.jar
+[INFO] Installing E:\devops\pkuzmin\pkuzmin\database\pom.xml to C:\Users\pavie\.m2\repository\ru\diasoft\micro\pkuzmin-db\1.01.01-SNAPSHOT\pkuzmin-db-1.01.01-SNAPSHOT.pom
+[INFO] Installing E:\devops\pkuzmin\pkuzmin\database\target\pkuzmin-db-1.01.01-SNAPSHOT.zip to C:\Users\pavie\.m2\repository\ru\diasoft\micro\pkuzmin-db\1.01.01-SNAPSHOT\pkuzmin-db-1.01.01-SNAPSHOT.zip
+[INFO] 
+[INFO] ----------------------< ru.diasoft.micro:pkuzmin >----------------------
+[INFO] Building Microservice for pkuzmin 1.01.01-SNAPSHOT                 [3/4]
+[INFO] --------------------------------[ jar ]---------------------------------
+[WARNING] The POM for io.sundr:sundr-codegen:jar:0.21.0 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+[WARNING] The artifact io.github.openfeign:feign-java8:jar:10.4.0 has been relocated to io.github.openfeign:feign-core:jar:10.4.0
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ pkuzmin ---
+[INFO] Deleting E:\devops\pkuzmin\pkuzmin\service\target
+[INFO] 
+[INFO] --- maven-enforcer-plugin:3.0.0-M3:enforce (enforce) @ pkuzmin ---
+[WARNING] Invalid POM for io.sundr:sundr-codegen:jar:0.21.0, transitive dependencies (if any) will not be available, enable debug logging for more details
+[WARNING] Invalid POM for io.sundr:sundr-codegen:jar:0.21.0, transitive dependencies (if any) will not be available, enable debug logging for more details
+[INFO] 
+[INFO] --- git-commit-id-plugin:4.0.4:revision (default) @ pkuzmin ---
+[INFO] 
+[INFO] --- jacoco-maven-plugin:0.8.4:prepare-agent (default) @ pkuzmin ---
+[WARNING] The artifact xml-apis:xml-apis:jar:2.0.2 has been relocated to xml-apis:xml-apis:jar:1.0.b2
+[INFO] argLine set to -javaagent:C:\\Users\\pavie\\.m2\\repository\\org\\jacoco\\org.jacoco.agent\\0.8.4\\org.jacoco.agent-0.8.4-runtime.jar=destfile=E:\\devops\\pkuzmin\\pkuzmin\\service\\target\\jacoco.exec
+[INFO] 
+[INFO] --- dqcodegen-maven-plugin:1.07.08-21061601:qarcher (Generate REST Controller by Q.Archer) @ pkuzmin ---
+[INFO] <DQCodeGenMojo> mvnProjectBasedir: E:\devops\pkuzmin\pkuzmin\service
+[INFO] <DQCodeGenMojo> mvnProjectBuildDirectory: E:\devops\pkuzmin\pkuzmin\service\target
+[INFO] <DQCodeGenMojo> skip = true (target not executed)
+[INFO] 
+[INFO] --- dqcodegen-maven-plugin:1.07.08-21061601:qarcher (Generate Events) @ pkuzmin ---
+[INFO] <DQCodeGenMojo> mvnProjectBasedir: E:\devops\pkuzmin\pkuzmin\service
+[INFO] <DQCodeGenMojo> mvnProjectBuildDirectory: E:\devops\pkuzmin\pkuzmin\service\target
+[INFO] <DQCodeGenMojo> skip = true (target not executed)
+[INFO] 
+[INFO] --- build-helper-maven-plugin:3.1.0:add-source (add-generated) @ pkuzmin ---
+[INFO] Source directory: E:\devops\pkuzmin\pkuzmin\service\target\generated-sources\dqcodegen added.
+[INFO] 
+[INFO] --- apt-maven-plugin:1.1.3:process (default) @ pkuzmin ---
+[WARNING] The artifact org.apache.commons:commons-io:jar:1.3.2 has been relocated to commons-io:commons-io:jar:1.3.2: https://issues.sonatype.org/browse/MVNCENTRAL-244
+[INFO] 
+[INFO] --- spring-boot-maven-plugin:2.2.6.RELEASE:build-info (default) @ pkuzmin ---
+[INFO] 
+[INFO] --- dqcodegen-maven-plugin:1.07.08-21061601:build-profiles (Generate profiles yaml) @ pkuzmin ---
+[INFO] <DQCodeGenMojo> mvnProjectBasedir: E:\devops\pkuzmin\pkuzmin\service
+[INFO] <DQCodeGenMojo> mvnProjectBuildDirectory: E:\devops\pkuzmin\pkuzmin\service\target
+[INFO] <DQCodeGenMojoProfile> CodeGenContext{rest-api = true, use-swagger = true, qbpm = false, grpc-api = false}
+[INFO] <DQCodeGen> start 'Special Prepare'. time = 2022-05-13T16:11:48
+[INFO] <DQCodeGen> end 'Special Prepare'. time = 2022-05-13T16:11:48, duration = 00:00:00.000
+[INFO] <DQCodeGen> start 'Common Validate'. time = 2022-05-13T16:11:48
+[INFO] <DQCodeGen> replace macros: property=target-folder, oldValue='${project.build.directory}/generated-sources/dqcodegen', newValue='E:\devops\pkuzmin\pkuzmin\service\target/generated-sources/dqcodegen'
+[INFO] <DQCodeGen> replace macros: property=swagger-file, oldValue='${project.basedir}/src/main/resources/swagger.json', newValue='E:\devops\pkuzmin\pkuzmin\service/src/main/resources/swagger.json'
+[INFO] <DQCodeGen> replace macros: property=asyncapi-file, oldValue='${project.basedir}/src/main/resources/asyncapi.json', newValue='E:\devops\pkuzmin\pkuzmin\service/src/main/resources/asyncapi.json'
+[INFO] <DQCodeGen> replace macros: property=target-resources-folder, oldValue='${project.build.directory}/generated-resources/dqcodegen', newValue='E:\devops\pkuzmin\pkuzmin\service\target/generated-resources/dqcodegen'
+[INFO] <DQCodeGen> replace macros: property=target-package, oldValue='${project.groupId}.pkuzmin', newValue='ru.diasoft.micro.pkuzmin'
+[INFO] <DQCodeGen> remove '-': property=target-package, oldValue='ru.diasoft.micro.pkuzmin', newValue='ru.diasoft.micro.pkuzmin'
+[INFO] <DQCodeGen> getClassName() rawValue='pkuzmin', result='Pkuzmin'
+[INFO] <DQCodeGen> create targetFolder: E:\devops\pkuzmin\pkuzmin\service\target\generated-sources\dqcodegen
+[INFO] <DQCodeGen> addCompileSource: E:\devops\pkuzmin\pkuzmin\service\target/generated-sources/dqcodegen
+[INFO] <DQCodeGen> create targetFolder: E:\devops\pkuzmin\pkuzmin\service\target\generated-resources\dqcodegen
+[INFO] <DQCodeGen> addResource: E:\devops\pkuzmin\pkuzmin\service\target/generated-resources/dqcodegen
+[INFO] <DQCodeGen> end 'Common Validate'. time = 2022-05-13T16:11:48, duration = 00:00:00.009
+[INFO] <DQCodeGen> start 'Special Validate'. time = 2022-05-13T16:11:48
+[INFO] <DQCodeGen> end 'Special Validate'. time = 2022-05-13T16:11:48, duration = 00:00:00.001
+[INFO] <DQCodeGen> CodeGenContext{rest-api = true, target-package = ru.diasoft.micro.pkuzmin, service-name = pkuzmin, target-resources-folder = E:\devops\pkuzmin\pkuzmin\service\target/generated-resources/dqcodegen, swagger-file = E:\devops\pkuzmin\pkuzmin\service/src/main/resources/swagger.json, use-swagger = true, asyncapi-file = E:\devops\pkuzmin\pkuzmin\service/src/main/resources/asyncapi.json, qbpm = false, service-version = 1.01.01-SNAPSHOT, target-folder = E:\devops\pkuzmin\pkuzmin\service\target/generated-sources/dqcodegen, source-file-encoding = utf-8, grpc-api = false}
+[INFO] <DQCodeGen> start 'Special Generate'. time = 2022-05-13T16:11:48
+[INFO] <DQCodeGenProfile> start 'Generate resources'. time = 2022-05-13T16:11:48
+[INFO] <DQCodeGenProfile> start 'Generate profiles yaml'. time = 2022-05-13T16:11:48
+[INFO] <ProfileBuilder> start 'build profiles'. time = 2022-05-13T16:11:48
+[INFO] <ProfileBuilder> Create package resources dir: E:\devops\pkuzmin\pkuzmin\service\target\generated-resources\dqcodegen
+[INFO] <ProfileBuilder> Create file: E:\devops\pkuzmin\pkuzmin\service\target\generated-resources\dqcodegen\application-shared.yml
+[INFO] <ProfileBuilder> end 'build profiles'. time = 2022-05-13T16:11:49, duration = 00:00:00.518
+[INFO] <DQCodeGenProfile> end 'Generate profiles yaml'. time = 2022-05-13T16:11:49, duration = 00:00:00.521
+[INFO] <DQCodeGenProfile> end 'Generate resources'. time = 2022-05-13T16:11:49, duration = 00:00:00.522
+[INFO] <DQCodeGen> end 'Special Generate'. time = 2022-05-13T16:11:49, duration = 00:00:00.522
+[INFO] 
+[INFO] --- build-helper-maven-plugin:3.1.0:add-resource (add-generated-resources) @ pkuzmin ---
+[INFO] 
+[INFO] --- maven-resources-plugin:3.2.0:resources (default-resources) @ pkuzmin ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] Copying 11 resources
+[INFO] Copying 15 resources
+[INFO] Copying 15 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ pkuzmin ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 4 source files to E:\devops\pkuzmin\pkuzmin\service\target\classes
+[INFO] 
+[INFO] --- dsdescrgenerator:1.9:readme_generating (default) @ pkuzmin ---
+java.io.FileNotFoundException: module.yaml (Не удается найти указанный файл)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(FileInputStream.java:195)
+	at java.io.FileInputStream.<init>(FileInputStream.java:138)
+	at java.io.FileInputStream.<init>(FileInputStream.java:93)
+	at ru.diasoft.maven.descr_generator.getTocken(descr_generator.java:81)
+	at ru.diasoft.maven.descr_generator.getSysName(descr_generator.java:102)
+	at ru.diasoft.maven.descr_generator.execute(descr_generator.java:164)
+	at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.java:137)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:210)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:156)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:148)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:117)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:81)
+	at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build(SingleThreadedBuilder.java:56)
+	at org.apache.maven.lifecycle.internal.LifecycleStarter.execute(LifecycleStarter.java:128)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:305)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:192)
+	at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:105)
+	at org.apache.maven.cli.MavenCli.execute(MavenCli.java:972)
+	at org.apache.maven.cli.MavenCli.doMain(MavenCli.java:293)
+	at org.apache.maven.cli.MavenCli.main(MavenCli.java:196)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced(Launcher.java:282)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:225)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode(Launcher.java:406)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.main(Launcher.java:347)
+	at org.codehaus.classworlds.Launcher.main(Launcher.java:47)
+java.io.FileNotFoundException: module.yaml (Не удается найти указанный файл)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(FileInputStream.java:195)
+	at java.io.FileInputStream.<init>(FileInputStream.java:138)
+	at java.io.FileInputStream.<init>(FileInputStream.java:93)
+	at ru.diasoft.maven.descr_generator.getTocken(descr_generator.java:81)
+	at ru.diasoft.maven.descr_generator.getSysName(descr_generator.java:104)
+	at ru.diasoft.maven.descr_generator.execute(descr_generator.java:164)
+	at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.java:137)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:210)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:156)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:148)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:117)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:81)
+	at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build(SingleThreadedBuilder.java:56)
+	at org.apache.maven.lifecycle.internal.LifecycleStarter.execute(LifecycleStarter.java:128)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:305)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:192)
+	at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:105)
+	at org.apache.maven.cli.MavenCli.execute(MavenCli.java:972)
+	at org.apache.maven.cli.MavenCli.doMain(MavenCli.java:293)
+	at org.apache.maven.cli.MavenCli.main(MavenCli.java:196)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced(Launcher.java:282)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:225)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode(Launcher.java:406)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.main(Launcher.java:347)
+	at org.codehaus.classworlds.Launcher.main(Launcher.java:47)
+[INFO] Start parse description.txt file in [E:\devops\pkuzmin\pkuzmin\description.txt]
+[INFO] Create link to swagger page - [https://dsagregator2.diasoft.ru/contract-ui/contract-ui?module_name=&version=master]
+[INFO] 
+[INFO] --- maven-resources-plugin:3.2.0:testResources (default-testResources) @ pkuzmin ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] skip non existing resourceDirectory E:\devops\pkuzmin\pkuzmin\service\src\test\resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ pkuzmin ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.2:unpack (unpack) @ pkuzmin ---
+[INFO] Configured Artifact: ru.diasoft.micro:pkuzmin-db:1.01.01-SNAPSHOT:jar
+[INFO] Unpacking E:\devops\pkuzmin\pkuzmin\database\target\pkuzmin-db-1.01.01-SNAPSHOT.jar to E:\devops\pkuzmin\pkuzmin\service\target\test-classes with includes "**/*" and excludes ""
+[INFO] 
+[INFO] --- maven-surefire-plugin:3.0.0-M5:test (default-test) @ pkuzmin ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running ru.diasoft.micro.archunit.CayenneDependencyTest
+WARNING: sun.reflect.Reflection.getCallerClass is not supported. This will impact performance.
+2022-05-13 16:11:57,840 main WARN No Docker URI provided. Docker information is unavailable
+2022-05-13 16:11:57,843 main WARN Unable to read container information: no protocol: null/containers/json
+2022-05-13T12:11:58.422Z, INFO: DsTracerSpot.getTracerHolder(): accept DsTracerHolder=ru.diasoft.flextera.dstrace.sleuth.DsTracerHolderSleuth, thread: main, logger: r.d.f.d.DsTracerSpot, host: DESKTOP-19N9A73
+2022-05-13T12:11:58.492Z, INFO: Detected Java version '1.8.0_241', thread: main, logger: c.t.a.c.PluginLoader, host: DESKTOP-19N9A73
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.208 s - in ru.diasoft.micro.archunit.CayenneDependencyTest
+[INFO] Running ru.diasoft.micro.archunit.ControllerMethodReturnTypeTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.417 s - in ru.diasoft.micro.archunit.ControllerMethodReturnTypeTest
+[INFO] Running ru.diasoft.micro.archunit.ControllerOutsideAccessTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.548 s - in ru.diasoft.micro.archunit.ControllerOutsideAccessTest
+[INFO] Running ru.diasoft.micro.archunit.ControllerShouldContainAPITest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.233 s - in ru.diasoft.micro.archunit.ControllerShouldContainAPITest
+[INFO] Running ru.diasoft.micro.archunit.EntityLocateDomainTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.276 s - in ru.diasoft.micro.archunit.EntityLocateDomainTest
+[INFO] Running ru.diasoft.micro.archunit.NamingConventionTests
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.972 s - in ru.diasoft.micro.archunit.NamingConventionTests
+[INFO] Running ru.diasoft.micro.archunit.NamingPackageTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.153 s - in ru.diasoft.micro.archunit.NamingPackageTest
+[INFO] Running ru.diasoft.micro.archunit.SwaggerAnnotationTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.656 s - in ru.diasoft.micro.archunit.SwaggerAnnotationTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 9, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --- jacoco-maven-plugin:0.8.4:report (report) @ pkuzmin ---
+[INFO] Loading execution data file E:\devops\pkuzmin\pkuzmin\service\target\jacoco.exec
+[INFO] Analyzed bundle 'Microservice for pkuzmin' with 0 classes
+[INFO] 
+[INFO] --- maven-jar-plugin:3.2.0:jar (default-jar) @ pkuzmin ---
+[INFO] Building jar: E:\devops\pkuzmin\pkuzmin\service\target\pkuzmin-1.01.01-SNAPSHOT.jar
+[INFO] 
+[INFO] --- spring-boot-maven-plugin:2.2.6.RELEASE:repackage (default) @ pkuzmin ---
+[INFO] Replacing main artifact with repackaged archive
+[INFO] 
+[INFO] --- maven-install-plugin:2.4:install (default-install) @ pkuzmin ---
+[INFO] Installing E:\devops\pkuzmin\pkuzmin\service\target\pkuzmin-1.01.01-SNAPSHOT.jar to C:\Users\pavie\.m2\repository\ru\diasoft\micro\pkuzmin\1.01.01-SNAPSHOT\pkuzmin-1.01.01-SNAPSHOT.jar
+[INFO] Installing E:\devops\pkuzmin\pkuzmin\service\pom.xml to C:\Users\pavie\.m2\repository\ru\diasoft\micro\pkuzmin\1.01.01-SNAPSHOT\pkuzmin-1.01.01-SNAPSHOT.pom
+[INFO] 
+[INFO] ------------------< ru.diasoft.micro:pkuzmin-bundle >-------------------
+[INFO] Building pkuzmin 1.01.01-SNAPSHOT                                  [4/4]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ pkuzmin-bundle ---
+[INFO] Deleting E:\devops\pkuzmin\pkuzmin\bundle\target
+[INFO] 
+[INFO] --- maven-assembly-plugin:3.3.0:single (make-assembly) @ pkuzmin-bundle ---
+[INFO] Reading assembly descriptor: binary.xml
+[WARNING] Cannot include project artifact: ru.diasoft.micro:pkuzmin-bundle:pom:1.01.01-SNAPSHOT; it doesn't have an associated file or directory.
+[INFO] Building zip: E:\devops\pkuzmin\pkuzmin\bundle\target\pkuzmin-1.01.01-SNAPSHOT.zip
+[INFO] 
+[INFO] --- maven-install-plugin:2.4:install (default-install) @ pkuzmin-bundle ---
+[INFO] Installing E:\devops\pkuzmin\pkuzmin\bundle\pom.xml to C:\Users\pavie\.m2\repository\ru\diasoft\micro\pkuzmin-bundle\1.01.01-SNAPSHOT\pkuzmin-bundle-1.01.01-SNAPSHOT.pom
+[INFO] Installing E:\devops\pkuzmin\pkuzmin\bundle\target\pkuzmin-1.01.01-SNAPSHOT.zip to C:\Users\pavie\.m2\repository\ru\diasoft\micro\pkuzmin-bundle\1.01.01-SNAPSHOT\pkuzmin-bundle-1.01.01-SNAPSHOT.zip
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for Parent for pkuzmin 1.01.01-SNAPSHOT:
+[INFO] 
+[INFO] Parent for pkuzmin ................................. SUCCESS [  0.644 s]
+[INFO] Database for pkuzmin ............................... SUCCESS [  8.885 s]
+[INFO] Microservice for pkuzmin ........................... SUCCESS [ 40.853 s]
+[INFO] pkuzmin ............................................ SUCCESS [  6.168 s]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  58.519 s
+[INFO] Finished at: 2022-05-13T16:12:19+04:00
+[INFO] ------------------------------------------------------------------------
+
+Process finished with exit code 0

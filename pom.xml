@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>ru.diasoft.micro</groupId>
+    <artifactId>archetype-parent</artifactId>
+    <version>1.23.01-21061801</version>
+  </parent>
+  <groupId>ru.diasoft.micro</groupId>
+  <artifactId>pkuzmin-parent</artifactId>
+  <version>1.01.01-SNAPSHOT</version>
+  <packaging>pom</packaging>
+  <name>Parent for pkuzmin</name>
+  <url>http://www.diasoft.com</url>
+  <modules>
+    <module>database</module>
+    <module>service</module>
+    <module>bundle</module>
+  </modules>
+  <distributionManagement>
+    <repository>
+      <id>diasoft_repo</id>
+      <url>http://maven:8080/maven2/repo/</url>
+    </repository>
+  </distributionManagement>
+  <properties>
+    <archetype-bom.version>1.23.01-21061801</archetype-bom.version>
+  </properties>
+
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>3.0.0-M5</version>
+      </dependency>
+      <!--joda-time-->
+      <dependency>
+        <groupId>joda-time</groupId>
+        <artifactId>joda-time</artifactId>
+        <version>${joda-time.version}</version>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+
+  <profiles>
+    <profile>
+      <id>profile1</id>
+      <activation>
+        <activeByDefault>true</activeByDefault>
+        <jdk>1.8</jdk>
+      </activation>
+      <properties>
+        <joda-time.version>2.10.5</joda-time.version>
+      </properties>
+    </profile>
+
+    <profile>
+      <id>profile2</id>
+      <properties>
+        <joda-time.version>2.3</joda-time.version>
+      </properties>
+    </profile>
+
+  </profiles>
+</project>

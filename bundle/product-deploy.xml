@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<product>
+    <sysname>pkuzmin</sysname>
+    <name>pkuzmin</name>
+
+    <modules>
+        <module>
+            <sysname>pkuzmin</sysname>
+        </module>
+    </modules>
+</product>
